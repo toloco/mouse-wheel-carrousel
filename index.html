@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INDEX</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script type="text/javascript">
+		$(document).ready(function(){ X.init(".box"); });
+	</script>
+</head>
+<body>
+
+	<div class="center" style="height:30px; width:100%;">
+		<a href="javascript:void(0);" onclick="X.up();"> <i class="fa fa-3x fa-arrow-circle-o-up"></i> </a>
+	</div>
+
+	<div id="main" class="">
+
+		<div class="box blue"><div class="center" style="font-size:300px; padding-top:180px;">1</div></div>
+		<div class="box lime"><div class="center" style="font-size:300px; padding-top:180px;">2</div></div>
+		<div class="box pink"><div class="center" style="font-size:300px; padding-top:180px;">3</div></div>
+		<div class="box red"><div class="center" style="font-size:300px; padding-top:180px;">4</div></div>				
+	</div>
+
+	<div class="center" style="height:50px; bottom:0px; position:absolute; width:100%;">
+		<a href="javascript:void(0);" onclick="X.down();"> <i class="fa fa-3x fa-arrow-circle-o-down"></i> </a>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.box { height: 100%; width: 100%; display: none; z-index: 999; }
+.lime { background: lime;}
+.blue { background: deepskyblue;}
+.pink { background: deeppink;}
+.red  { background: red;}
+
+.active { display: block !important; }
+.center { margin: auto; text-align: center;}
+
+#main {
+	left: 50px;
+	right: 50px;
+	top: 120px;
+	bottom: 70px;
+	position: absolute;
+}
+
+.animate {
+    -vendor-animation-duration: 1s;
+    -vendor-animation-delay: 0s;
+    -vendor-animation-iteration-count: infinite;
+}
+
+header {
+	z-index: 1;
+}
+
+body{
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
