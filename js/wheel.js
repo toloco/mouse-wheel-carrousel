@@ -1,6 +1,6 @@
 
 
-var X = {
+var W = {
 
 	"selector" :  ".box",
 	"items" : [],
@@ -9,46 +9,46 @@ var X = {
 
 	"init" : function (selector, first) {
 
-		X.selector = selector ? selector : X.selector;
-		$(X.selector).each(function() {
-			X.items.push(this);
+		W.selector = selector ? selector : W.selector;
+		$(W.selector).each(function() {
+			W.items.push(this);
 			$(this).addClass("animated");
 		});
 
 		$('body').on('mousewheel', function(event) {
 			var deltaY = event.deltaY;
-		    	if ( deltaY == 1 ) {  X.up();  }
-		    	else               {  X.down(); }
+		    	if ( deltaY == 1 ) {  W.up();  }
+		    	else               {  W.down(); }
 		});
 
-		X.hide(X.selector);
-		X.show(X.items[X.selected]);
+		W.hide(W.selector);
+		W.show(W.items[W.selected]);
 
 	},
 
 	"timer" : null,
 	"performer" : function (up) {
-		  clearTimeout(X.timer);
-		  X.timer = setTimeout("mouseWheelAction", 1);
+		  clearTimeout(W.timer);
+		  W.timer = setTimeout("mouseWheelAction", 1);
 	},
 
 	"up" : function (){
-		if (X.selected > 0) {
-			X.selected --;
-			X.hide(X.items[X.selected+1]);
-			X.show(X.items[X.selected]);
+		if (W.selected > 0) {
+			W.selected --;
+			W.hide(W.items[W.selected+1]);
+			W.show(W.items[W.selected]);
 		}
 	},
 	"down" : function (){
-		if (X.selected < X.items.length -1) {
-			X.selected ++;
-			X.hide(X.items[X.selected-1]);
-			X.show(X.items[X.selected]);
+		if (W.selected < W.items.length -1) {
+			W.selected ++;
+			W.hide(W.items[W.selected-1]);
+			W.show(W.items[W.selected]);
 		}
 	},
 
 	"show" : function (i){ 
-		X.removeClass(i);
+		W.removeClass(i);
 		$(i).show(); 
 		$(i).addClass("bounceInUp"); 
 
